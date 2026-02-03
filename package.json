@@ -4,9 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "live-sever .",
     "test": "echo \"Error: no test specified\" && exit 1",
-
+    "start": "live-sever ."
   },
   "repository": {
     "type": "git",

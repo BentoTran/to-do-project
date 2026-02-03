@@ -1,4 +1,4 @@
-// 1) The "box" to hold all the tasks im told.
+// 1) The "box" to hold all the tasks.
 let todos = [];
 
 // 2) Get the thingies in html that we need
@@ -9,8 +9,8 @@ let countEl = document.querySelector("#count");
 let emptyState = document.querySelector("#empty-state");
 
 // 3) This will hopefully update what we see on the screen
-function renderTodos() {
-  // Clear the list area first (so we can re-build it) I was told this needed to happen... idk why.
+function doTodos() {
+  // Clear the list area first (so we can re-build it)
   list.innerHTML = "";
 
   // Show or hide the empty message
@@ -54,7 +54,7 @@ function renderTodos() {
         todos[i].completed = true;
       }
 
-      renderTodos();
+      doTodos();
     });
 
     // This is the remove button
@@ -66,7 +66,7 @@ function renderTodos() {
     removeBtn.addEventListener("click", function () {
       // Remove 1 item at position i
       todos.splice(i, 1);
-      renderTodos();
+      doTodos();
     });
 
     // Put the text and button inside the <li>
@@ -98,7 +98,7 @@ form.addEventListener("submit", function (event) {
   // Clear the input
   input.value = "";
 
-  renderTodos();
+  doTodos();
 });
 
-renderTodos();
+doTodos();

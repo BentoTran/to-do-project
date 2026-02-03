@@ -1,3 +1,102 @@
+/* Beginner CSS for a simple, clean to-do app */
+
+/* 1) Style the whole page */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 0;
+}
+
+/* 2) The 'main' box in the middle */
+.app {
+  background-color: white;
+  width: 400px;
+  margin: 60px auto; /* centers the box */
+  padding: 20px;
+  border: 2px solid #dddddd;
+  border-radius: 10px;
+}
+
+/* 3) Title */
 h1 {
-  color: blue;
+  text-align: center;
+  margin-top: 0;
+}
+
+/* 4) Small hint text */
+.hint {
+  text-align: center;
+  color: gray;
+  margin-top: -10px;
+}
+
+/* 5) The Form layout */
+form {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+/* 6) THis is the box where Inputs go */
+input {
+  flex: 1; /* makes input take the extra space */
+  padding: 10px;
+  border: 1px solid #cccccc;
+  border-radius: 6px;
+}
+
+/* 7) Add button */
+.add-btn {
+  padding: 10px 14px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.add-btn:hover {
+  background-color: #45a049;
+}
+
+/* 8) Task counter row */
+.bar {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  color: gray;
+  font-size: 14px;
+}
+
+/* 9) The list */
+ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 15px;
+}
+
+/* 10) Each task item */
+.todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: #fafafa;
+  border: 1px solid #dddddd;
+  border-radius: 6px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+/* 11) The task text */
+.todo-text {
+  margin: 0;
+  cursor: pointer;
+}
+
+/* 12) Completed task style (line through) */
+.todo.completed .todo-text {
+  text-decoration: line-through;
+  color: gray;
 }

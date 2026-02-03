@@ -9,24 +9,36 @@
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+  <main class="app">
   <header>
     <h1> Thee To-Do List!</h1>
-    <p> class="hint">Click a task to complete it.</p>
+    <p class="hint">Click a task to complete it.</p>
   </header>
 
   <!-- Form = where users add task -->
-  <form id-"todo-form">
+  <form id="todo-form">
     <input
     id="todo-input"
     type="text"
-    placeholder="Add a task (e.g., "Buy coffee beans")"
+    placeholder="Add a task (Example: 'Buy coffee dummy')"
     autocomplete="off"
     />
     <button class="add-btn" type="submit">Add</button>
   </form>
 
+  <div class="bar">
+    <span id="count">0 tasks</span>
+    <span>Tip: press <kbd>Enter</kbd> to add</span>
+  </div>
 
-<script src="./index.js"></script>
+  <!-- List = where tasks are going to appear -->
+  <ul id="todo-list"></ul>
 
+  <div id="empty-state" class="empty">
+    No tasks yet. Add your first one above ^
+  </div>
+
+</main>
+<script src="./index.js"defer></script>
 </body>
 </html>
